@@ -1,0 +1,21 @@
+SELECT 
+    e.FirstName,
+    e.LastName,
+    d.DepartmentName,
+    e.Salary
+FROM 
+    Employees e
+JOIN 
+    Departments d 
+    ON e.DepartmentID = d.DepartmentID
+WHERE 
+    e.Salary > (
+        SELECT 
+            AVG(e2.Salary)
+        FROM 
+            Employees e2
+        WHERE 
+            e2.DepartmentID = e.DepartmentID
+    )
+ORDER BY 
+    e.Salary ASC;
