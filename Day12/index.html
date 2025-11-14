@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Flowers School Portal</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ebe6e6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-style: normal;
+            color: #012d38;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            text-align: center;
+            background-color: #ff502f;
+            color: #EEEEEE;
+            padding: 10px 0;
+        }
+
+        .navbar ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 50px;
+            list-style-type: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #c0edf0;
+            border-radius: 8px;
+            color: #012d38;
+        }
+
+        h2,
+        h3 {
+            color: #012d38;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #012d38;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .student-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="School Logo" class="logo">
+        Welcome to Spring Flowers School Student Portal
+    </h1>
+
+    <nav class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>My Information</li>
+            <li>Courses</li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome Page</h2>
+        <p>Hello student! Welcome to your portal. Use the menu above to navigate through your student dashboard.</p>
+    </section>
+
+    <section id="student-info">
+        <h2>My Information</h2>
+        <div class="student-info">
+            <img src="https://www.shutterstock.com/image-vector/portrait-closeup-face-young-woman-260nw-2350242825.jpg" alt="Student Image" class="student-image">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>Poonam Raut</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <th>Roll Number</th>
+                    <td>101</td>
+                </tr>
+                <tr>
+                    <th>Course Enrolled</th>
+                    <td>Java</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h3>Courses Available</h3>
+        <ol>
+            <li>Java</li>
+            <li>HTML and CSS</li>
+            <li>SQL</li>
+        </ol>
+    </section>
+
+</body>
+
+</html>
