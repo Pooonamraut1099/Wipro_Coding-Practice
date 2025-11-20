@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+         http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<!-- Jersey REST config (if you still need it) -->
+	<servlet>
+		<servlet-name>Jersey Web Application</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>com.java.js</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Jersey Web Application</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Add Contact -->
+	<servlet>
+		<servlet-name>AddContactServlet</servlet-name>
+		<servlet-class>com.java.js.servlet.AddContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddContactServlet</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+
+	<!-- View Contacts -->
+	<servlet>
+		<servlet-name>ViewContactsServlet</servlet-name>
+		<servlet-class>com.java.js.servlet.ViewContactsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewContactsServlet</servlet-name>
+		<url-pattern>/view</url-pattern>
+	</servlet-mapping>
+
+	<!-- Delete Contact -->
+	<servlet>
+		<servlet-name>DeleteContactServlet</servlet-name>
+		<servlet-class>com.java.js.servlet.DeleteContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteContactServlet</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+	<!-- Update Contact -->
+	<servlet>
+		<servlet-name>UpdateContactServlet</servlet-name>
+		<servlet-class>com.java.js.servlet.UpdateContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateContactServlet</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+
+	<!-- Search Contact -->
+	<servlet>
+		<servlet-name>SearchContactServlet</servlet-name>
+		<servlet-class>com.java.js.servlet.SearchContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchContactServlet</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+
+</web-app>
